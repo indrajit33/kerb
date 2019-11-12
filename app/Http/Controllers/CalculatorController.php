@@ -13,5 +13,9 @@ class CalculatorController extends Controller
     		$total = array_sum($request->input('numbers'));
     		return response()->json(["total" => $total], 200);
     	}
+		else
+		{
+			return response()->json(["total" => 'NaN'], 404);
+		}
     }
 }
